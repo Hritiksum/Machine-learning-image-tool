@@ -1,0 +1,203 @@
+
+
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="icon" href="{%static '46.png' %}" type="image/png">
+  <title>{% block title %}Object Detection Application{% endblock %}</title>
+  
+
+</head>
+
+<body style="background-image: url(https://wallpapersite.com/images/pages/pic_h/17944.jpg);background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;">
+<div class="spinner-border" role="status" style="background-color: transparent;position: fixed;left: 49.5%;top: 50%;z-index: 99999;display: flex;color:#33ccff;">
+
+</div>
+  <!--Navbar-->
+  <div class="card" id="card" style="
+    background-color: black;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;">
+  </div>
+  
+  
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+    <!-- Navbar brand -->
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/objectdetection">Object_Detection
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/classify">Image_classify
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/segmentation">Image_Segmentation
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/foldermodel">DataGen_Classification_model_generate
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/csvmodel">Csv Classification_model_generate
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+<div class="container-fluid" style="margin-top: 1rem;margin-bottom: 5rem;">
+    <div class="row">
+        <div class="col-md-6" style="margin: 0 auto;">
+            <!-- Card -->
+            <div class="card" style="margin-bottom: 1rem;">
+
+                <!-- Card image -->
+                <div class="view overlay">
+                    <img class="img-fluid" src={{f5}}
+                        alt="Card image cap" style="animation: linear;">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <li class="list-group-item" style="text-align: center;margin: 0 auto;" >
+                    <h4 class="card-title" style="text-align: center;margin: 0 auto;">    {{result}}
+                    </h4>
+                
+                    </br>
+                     
+
+
+                    <form  action="{%  url 'upload_foldermodel'  %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01" name="document" required>
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+
+
+
+                    </br></br>
+                    <div class="col-md-12 col-lg-12 mb-4">
+                        <button type="submit" class="btn btn-info btn-rounded" style="display: block;margin: 0 auto;">Get Predictions DG</button>
+          
+                       
+                      </div>
+                        
+            
+                    </form>
+                </li>
+                    
+                </div>
+
+            </div>
+            <!-- Card -->
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 1rem;">
+      <a href="/" class="btn btn-primary" style="margin: 0 auto;display: block;">Home</a>
+      
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3"
+        style="background: black;color: white;font-weight:bold;font-size:0.5rem;">
+        <span>© 2020 Copyright: <a href="https://github.com/Hritiksum">Hritik Suman&nbsp;&nbsp;
+          <a class="ins-ic" href="https://github.com/Hritiksum"><i class="fab fa-github  fa-3x"></i></a></span>
+          
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- JQuery -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          //Preloader
+          preloaderFadeOutTime = 2500;
+          function hidePreloader() {
+              var preloader1 = $('.spinner-border');
+              var preloader2 = $('#card');
+
+              preloader1.fadeOut(preloaderFadeOutTime);
+              preloader2.fadeOut(preloaderFadeOutTime);
+
+
+          }
+          hidePreloader();
+      });
+  </script>
+</body>
+
+</html>

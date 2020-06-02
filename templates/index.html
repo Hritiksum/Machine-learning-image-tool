@@ -1,0 +1,254 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="icon" href="{%static '46.png' %}" type="image/png">
+  <title>{% block title %}Minor Project{% endblock %}</title>
+  
+
+</head>
+
+<body style="background-image: url(https://wallpapersite.com/images/pages/pic_h/17944.jpg);background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;">
+<div class="spinner-border" role="status" style="background-color: transparent;position: fixed;left: 49.5%;top: 50%;z-index: 99999;display: flex;color:#33ccff;">
+
+</div>
+  <!--Navbar-->
+  <div class="card" id="card" style="
+    background-color: black;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;">
+  </div>
+  
+  
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+    <!-- Navbar brand -->
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/objectdetection">Object_Detection
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/classify">Image_classify
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/segmentation">Image_Segmentation
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/foldermodel">DataGen_Classification_model_generate
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/csvmodel">Csv Classification_model_generate
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+  {% block content %}
+  <form autocomplete="off">
+  <div class="container-fluid" style="margin-top: 1rem;">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Section -->
+        <section>
+
+          <i class="fad fa-sack-dollar"
+            style="margin:0 auto;display: block;text-align: center;font-size: 6rem;color:red"></i>
+
+          <!--First row-->
+          <div class="row d-flex justify-content-center">
+
+
+            <div class="col-md-12 col-lg-12 mb-4">
+              
+      
+              <div class="row">
+                <div class="col-md-12">
+                    <!--Mask with wave-->
+                    <div class="view overlay">
+                        
+            
+                    
+                    </div>
+                </div>
+            </div>
+          </br>
+        </br>
+      
+        
+
+              <!-- Material outline input -->
+              <div class="container">
+                
+<div class="row">
+  <div class="column">
+    <div class="card" style="width: 18rem;" >
+      <img src="/static/obejctDetection.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Object_Detection</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="objectdetection" class="btn btn-primary">Go to Object detection</a>
+      </div>
+    </div>
+  </div>
+<hr>
+  <div class="column">
+    <div class="card" style="width: 18rem;">
+      <img src="/static/imageClassification.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Image_classify  </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="classify" class="btn btn-primary">Go to Image classify</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="column">
+    <div class="card" style="width: 18rem;">
+      <img src="static/segement.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Image_Segementation  </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="segmentation" class="btn btn-primary">Go to Image Segementation</a>
+      </div>
+    </div>
+    <hr>
+  </div><div class="column">
+    <div class="card" style="width: 18rem;">
+      <img src="static/dattgen.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">DataGen Classification model generate</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="foldermodel" class="btn btn-primary">Go to DataGen</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <div class="column">
+    <div class="card" style="width: 18rem;">
+      <img src="/static/img.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Csv Classification model generate</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="csvmodel" class="btn btn-primary">Go to Image model generate</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+
+
+
+
+              </div>
+
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-4">
+              
+              <a href="/" class="btn btn-primary" style="margin: 0 auto;display: block;">Home</a>
+             
+            </div>
+
+
+          </div>
+          <!--First row-->
+
+        </section>
+        <!-- Section -->
+      </div>
+      </form>
+    </div>
+
+
+    {% endblock %}
+    <div class="container-fluid">
+      <!-- Footer -->
+      <footer class="page-footer font-small blue fixed-bottom">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3"
+          style="background: black;color: white;font-weight:bold;font-size:0.5rem;">
+          <span>© 2020 Copyright: <a href="https://github.com/Hritiksum">Hritik Suman&nbsp;&nbsp;
+            <a class="ins-ic" href="https://github.com/Hritiksum"><i class="fab fa-github  fa-3x"></i></a></span>
+            
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JQuery -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+            //Preloader
+            preloaderFadeOutTime = 2500;
+            function hidePreloader() {
+                var preloader1 = $('.spinner-border');
+                var preloader2 = $('#card');
+
+                preloader1.fadeOut(preloaderFadeOutTime);
+                preloader2.fadeOut(preloaderFadeOutTime);
+
+
+            }
+            hidePreloader();
+        });
+    </script>
+</body>
+
+</html>
